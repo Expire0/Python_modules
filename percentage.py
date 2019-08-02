@@ -6,3 +6,6 @@ Or if the question you wanted it to answer was "what is 5% of 20", rather than "
 
 def percentage(percent, whole):
   return (percent * whole) / 100.0
+
+                                                                                                             
+                #https://stackoverflow.com/questions/5997987/is-there-an-operator-to-calculate-percentage-in-python
