@@ -1,0 +1,39 @@
+mas= [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 333, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52]
+
+#index = 0
+#count = 0
+#kam = lambda x: x + 5
+
+weight = 10
+#stripe = len(mas) / weight + 1
+
+
+def stripe(device,weight):
+    g = len(device) / weight + 1
+    return g
+# Grab the wieght and determine the stripe
+# once you determine the wieght , find the device list and pass that to a function
+#        print(mas[index])
+#        count += 1
+#        index = kam(index)
+
+
+def test(list2):
+    org = {}
+    org1 = {}
+    # function to jump the list by x
+    kam = lambda x: x + int(stripe(list2,weight)) -1
+    count = 0
+    for i in range(0,int(stripe(list2,weight)) -1):
+        org["stripe" + str(i + 1)]= {}
+        index = i
+        count = 0
+        while count < weight:
+            #print(list2[index])
+            org["stripe" + str(i + 1)][count]= list2[index]
+            count += 1
+            index = kam(index)
+    print(org)
+
+
+test(mas)
