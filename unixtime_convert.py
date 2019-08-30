@@ -32,10 +32,10 @@ def range(time):
     return roundback, current
 
 
-
+#call the function and print the result. I am also mulitplying the result to get the milliseconds from seconds. 
 #print(int(range(date).strftime('%s')))
-print("Start time in unix milliseconds time " + str(int(range(test)[0].strftime('%s'))))
-print("Start time in unix milliseconds time " + str(int(range(test)[1].strftime('%s'))))
+print("Start time in unix milliseconds time " + str(int(range(test)[0].strftime('%s'))* 1000))
+print("Start time in unix milliseconds time " + str(int(range(test)[1].strftime('%s'))* 1000))
 
 
 #This was is more Pythonic and uses the current time from the host machine.
@@ -45,6 +45,6 @@ def range1(time):
     current = time.replace(minute=0,second=0,microsecond=0)
     return roundback, current
 
-
-print("Start time in unix milliseconds time " + str(int(range1(date)[0].strftime('%s'))))
-print("Start time in unix milliseconds time " + str(int(range1(date)[1].strftime('%s'))))
+#call the function and print the result. I am also mulitplying the result to get the milliseconds from seconds. 
+print("Start time in unix milliseconds time " + str(int(range1(date)[0].strftime('%s'))* 1000))
+print("Start time in unix milliseconds time " + str(int(range1(date)[1].strftime('%s'))* 1000))
