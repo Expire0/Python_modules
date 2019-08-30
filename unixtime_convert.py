@@ -2,21 +2,22 @@
 
 ###convert unix team to human readable time. This works if the unix time is in milliseconds. 
 
-import datetime 
+from datetime import datetime,timedelta 
 
 
-time = input("Enter the Cyclone event time to be converted: ")
+def milltohuman():
+    time = input("Enter the Cyclone event time to be converted: ")
 
 #convert to seconds 
-fix = int(time) / 1000
+    fix = int(time) / 1000
 
-value = datetime.datetime.fromtimestamp(fix)
+    value = datetime.datetime.fromtimestamp(fix)
+     #return the human readable format
+    return value.strftime('%Y-%m-%d %H:%M:%S')
 
-print(value.strftime('%Y-%m-%d %H:%M:%S'))
 
 
 
-from datetime import datetime,timedelta
 
 date = datetime.now()
 test = "2019/08/29 12:13:00"
